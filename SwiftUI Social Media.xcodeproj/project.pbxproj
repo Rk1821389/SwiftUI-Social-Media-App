@@ -19,6 +19,10 @@
 		AF587044295AD344007AC052 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AF587043295AD344007AC052 /* FirebaseStorage */; };
 		AF587046295AD4BC007AC052 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF587045295AD4BC007AC052 /* User.swift */; };
 		AF587048295B01A7007AC052 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF587047295B01A7007AC052 /* LoadingView.swift */; };
+		AF58704F295B658E007AC052 /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58704E295B658E007AC052 /* Extension+View.swift */; };
+		AF587054295B6841007AC052 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF587053295B6841007AC052 /* RegisterView.swift */; };
+		AF587056295B6946007AC052 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF587055295B6946007AC052 /* LoginViewModel.swift */; };
+		AF587058295B6D89007AC052 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF587057295B6D89007AC052 /* RegisterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		AF58703C295ABC9F007AC052 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AF587045295AD4BC007AC052 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF587047295B01A7007AC052 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		AF58704E295B658E007AC052 /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
+		AF587053295B6841007AC052 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		AF587055295B6946007AC052 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		AF587057295B6D89007AC052 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,11 +76,13 @@
 		AF587026295ABA91007AC052 /* SwiftUI Social Media */ = {
 			isa = PBXGroup;
 			children = (
+				AF58704D295B6571007AC052 /* Extensions */,
+				AF587050295B66C2007AC052 /* Utilities */,
 				AF58703B295ABC81007AC052 /* Model */,
 				AF58703A295ABC75007AC052 /* View */,
+				AF58704B295B6524007AC052 /* ViewModel */,
+				AF58704C295B6538007AC052 /* App */,
 				AF587035295ABBEE007AC052 /* GoogleService-Info.plist */,
-				AF587027295ABA91007AC052 /* SwiftUI_Social_MediaApp.swift */,
-				AF587029295ABA91007AC052 /* ContentView.swift */,
 				AF58702B295ABA93007AC052 /* Assets.xcassets */,
 				AF58702D295ABA93007AC052 /* Preview Content */,
 			);
@@ -90,8 +100,10 @@
 		AF58703A295ABC75007AC052 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AF587029295ABA91007AC052 /* ContentView.swift */,
 				AF58703C295ABC9F007AC052 /* LoginView.swift */,
 				AF587047295B01A7007AC052 /* LoadingView.swift */,
+				AF587053295B6841007AC052 /* RegisterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -109,6 +121,38 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF58704B295B6524007AC052 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF587055295B6946007AC052 /* LoginViewModel.swift */,
+				AF587057295B6D89007AC052 /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AF58704C295B6538007AC052 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AF587027295ABA91007AC052 /* SwiftUI_Social_MediaApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AF58704D295B6571007AC052 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AF58704E295B658E007AC052 /* Extension+View.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AF587050295B66C2007AC052 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,7 +238,11 @@
 				AF587046295AD4BC007AC052 /* User.swift in Sources */,
 				AF58703D295ABC9F007AC052 /* LoginView.swift in Sources */,
 				AF58702A295ABA91007AC052 /* ContentView.swift in Sources */,
+				AF587054295B6841007AC052 /* RegisterView.swift in Sources */,
+				AF587056295B6946007AC052 /* LoginViewModel.swift in Sources */,
 				AF587048295B01A7007AC052 /* LoadingView.swift in Sources */,
+				AF58704F295B658E007AC052 /* Extension+View.swift in Sources */,
+				AF587058295B6D89007AC052 /* RegisterViewModel.swift in Sources */,
 				AF587028295ABA91007AC052 /* SwiftUI_Social_MediaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
