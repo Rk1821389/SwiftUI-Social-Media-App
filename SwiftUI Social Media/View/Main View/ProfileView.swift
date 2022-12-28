@@ -6,27 +6,22 @@
 //
 
 import SwiftUI
-import Firebase
-import FirebaseStorage
-import FirebaseFirestore
+
 
 struct ProfileView: View {
-    //MARK: My Profile Data
-    @State private var myProfile: User?
-    @AppStorage("log_status") var logStatus: Bool = false
-    //MARK: View Properties
-    @State var errorMessage: String = ""
-    @State var showError: Bool = false
-    @State var isLoading: Bool = false
+    //MARK: - PROPERTIES
+    @ObservedObject private var profileVM = ProfileViewModel()
+    
+    //MARK: - BODY
     var body: some View {
         NavigationStack {
             VStack {
-                if let myProfile {
-                    ReusableProfileContent(user: myProfile)
+                if let profile = profileVM.myProfile {
+                    ReusableProfileContent(user: profile)
                         .refreshable {
                             //MARK: Refresh User Data
-                            self.myProfile = nil
-                            await fetchUserData()
+                            self.profileVM.myProfile = nil
+                            await profileVM.fetchUserData()
                         }
                 } else {
                     ProgressView()
@@ -34,8 +29,8 @@ struct ProfileView: View {
             }
             .refreshable {
                 //MARK: Refresh User Data
-                myProfile = nil
-                await fetchUserData()
+                profileVM.myProfile = nil
+                await profileVM.fetchUserData()
             }
             .navigationTitle("My Profile")
             .toolbar {
@@ -44,8 +39,8 @@ struct ProfileView: View {
                         //MARK: Two Action's
                         // 1. Logout
                         // 2. Delete Account
-                        Button("Logout", action: logOutUser)
-                        Button("Delete Account", role: .destructive, action: deleteAccount)
+                        Button("Logout", action: profileVM.logOutUser)
+                        Button("Delete Account", role: .destructive, action: profileVM.deleteAccount)
                     } label: {
                         Image(systemName: "ellipsis")
                             .rotationEffect(.init(degrees: 90))
@@ -57,67 +52,22 @@ struct ProfileView: View {
             }
         }
         .overlay {
-            LoadingView(show: $showError)
+            LoadingView(show: $profileVM.showError)
         }
-        .alert(errorMessage, isPresented: $showError) {
+        .alert(profileVM.errorMessage, isPresented: $profileVM.showError) {
             
         }
         .task {
             //This Modieier is like onAppear
             //So fetching for the first time only
-            if myProfile != nil { return }
+            if profileVM.myProfile != nil { return }
             //MARK: Initial Fetch
-            await fetchUserData()
+            await profileVM.fetchUserData()
         }
     }
-    
-    //MARK: - Fetching User Data
-    func fetchUserData() async {
-        guard let userUID = Auth.auth().currentUser?.uid else { return }
-        guard let user = try? await  Firestore.firestore().collection("Users").document(userUID).getDocument(as: User.self) else { return }
-        await MainActor.run(body: {
-            myProfile = user
-        })
-    }
-    
-    //MARK: Logging User Out
-    func logOutUser() {
-        try? Auth.auth().signOut()
-        logStatus = false
-    }
-    
-    //MARK: Deleting User Entire Account
-    func deleteAccount() {
-        isLoading = true
-        Task {
-            do {
-                guard let userUID = Auth.auth().currentUser?.uid else { return }
-                //Step 1. First Deleting Profile Image From Storage
-                let reference = Storage.storage().reference().child("Profile_Images").child(userUID)
-                try await reference.delete()
-                //Step 2: Deleting Firestore User Document
-                try await Firestore.firestore().collection("Users").document(userUID).delete()
-                //Final Step: Deleting Auth Account and setting Log Status to False
-                try await Auth.auth().currentUser?.delete()
-                logStatus = false
-            } catch {
-             await setError(error)
-            }
-        }
-    }
-    
-    //MARK: Setting Error
-    func setError(_ error: Error) async {
-        //MARK: UI Must be run on Main Thread
-        await MainActor.run(body: {
-            isLoading = false
-            errorMessage = error.localizedDescription
-            showError.toggle()
-        })
-    }
-    
 }
 
+//MARK: - PREVIEW
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

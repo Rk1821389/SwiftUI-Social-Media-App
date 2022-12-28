@@ -27,6 +27,7 @@
 		AF587066295C2AB3007AC052 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF587065295C2AB3007AC052 /* ProfileView.swift */; };
 		AF587068295C48A4007AC052 /* ReusableProfileContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF587067295C48A4007AC052 /* ReusableProfileContent.swift */; };
 		AF58706E295C4BD6007AC052 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AF58706D295C4BD6007AC052 /* SDWebImageSwiftUI */; };
+		AF587070295CB61F007AC052 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58706F295CB61F007AC052 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		AF587063295C29BB007AC052 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AF587065295C2AB3007AC052 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		AF587067295C48A4007AC052 /* ReusableProfileContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableProfileContent.swift; sourceTree = "<group>"; };
+		AF58706F295CB61F007AC052 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			children = (
 				AF587055295B6946007AC052 /* LoginViewModel.swift */,
 				AF587057295B6D89007AC052 /* RegisterViewModel.swift */,
+				AF58706F295CB61F007AC052 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				AF58704F295B658E007AC052 /* Extension+View.swift in Sources */,
 				AF587058295B6D89007AC052 /* RegisterViewModel.swift in Sources */,
 				AF587066295C2AB3007AC052 /* ProfileView.swift in Sources */,
+				AF587070295CB61F007AC052 /* ProfileViewModel.swift in Sources */,
 				AF587068295C48A4007AC052 /* ReusableProfileContent.swift in Sources */,
 				AF587028295ABA91007AC052 /* SwiftUI_Social_MediaApp.swift in Sources */,
 			);
