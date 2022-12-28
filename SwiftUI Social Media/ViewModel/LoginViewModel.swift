@@ -28,6 +28,7 @@ class LoginViewModel: ObservableObject {
     @AppStorage("user_UID") var userUID: String = ""
     
     //MARK: Functions
+    
     func loginUser() {
         isLoading = true
         Task {

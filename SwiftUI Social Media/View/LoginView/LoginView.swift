@@ -27,11 +27,13 @@ struct LoginView: View {
                     .textContentType(.emailAddress)
                     .border(1, .gray.opacity(0.5))
                     .padding(.top, 25)
+                    
                 
                 SecureField("Password", text: $loginVM.password)
                     .textContentType(.password)
                     .border(1, .gray.opacity(0.5))
                     .padding(.top, 25)
+                    
                 
                 Button {
                     loginVM.resetPassword()
@@ -53,6 +55,7 @@ struct LoginView: View {
                 }
                 .padding(.top, 10)
             } //: VSTACK
+            
             
             //MARK: - Register Button
             HStack {
