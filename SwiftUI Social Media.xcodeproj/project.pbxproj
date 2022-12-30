@@ -31,6 +31,8 @@
 		AF587074295CB996007AC052 /* CreateNewPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF587073295CB996007AC052 /* CreateNewPost.swift */; };
 		AF587076295CB9E9007AC052 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF587075295CB9E9007AC052 /* Post.swift */; };
 		AF587078295CC89F007AC052 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF587077295CC89F007AC052 /* PostView.swift */; };
+		AFF9A7E8295F6C0A00E8D621 /* ReusablePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF9A7E7295F6C0A00E8D621 /* ReusablePostView.swift */; };
+		AFF9A7EA295F71E600E8D621 /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF9A7E9295F71E600E8D621 /* PostCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		AF587073295CB996007AC052 /* CreateNewPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPost.swift; sourceTree = "<group>"; };
 		AF587075295CB9E9007AC052 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		AF587077295CC89F007AC052 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		AFF9A7E7295F6C0A00E8D621 /* ReusablePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusablePostView.swift; sourceTree = "<group>"; };
+		AFF9A7E9295F71E600E8D621 /* PostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +202,8 @@
 				AF587067295C48A4007AC052 /* ReusableProfileContent.swift */,
 				AF587073295CB996007AC052 /* CreateNewPost.swift */,
 				AF587077295CC89F007AC052 /* PostView.swift */,
+				AFF9A7E7295F6C0A00E8D621 /* ReusablePostView.swift */,
+				AFF9A7E9295F71E600E8D621 /* PostCardView.swift */,
 			);
 			path = "Main View";
 			sourceTree = "<group>";
@@ -284,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF9A7EA295F71E600E8D621 /* PostCardView.swift in Sources */,
 				AF587046295AD4BC007AC052 /* User.swift in Sources */,
 				AF58703D295ABC9F007AC052 /* LoginView.swift in Sources */,
 				AF58702A295ABA91007AC052 /* ContentView.swift in Sources */,
@@ -294,6 +301,7 @@
 				AF58704F295B658E007AC052 /* Extension+View.swift in Sources */,
 				AF587074295CB996007AC052 /* CreateNewPost.swift in Sources */,
 				AF587076295CB9E9007AC052 /* Post.swift in Sources */,
+				AFF9A7E8295F6C0A00E8D621 /* ReusablePostView.swift in Sources */,
 				AF587078295CC89F007AC052 /* PostView.swift in Sources */,
 				AF587058295B6D89007AC052 /* RegisterViewModel.swift in Sources */,
 				AF587066295C2AB3007AC052 /* ProfileView.swift in Sources */,
