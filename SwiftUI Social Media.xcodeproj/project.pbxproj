@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF3EC22D2962F34E00210A1D /* SearchUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3EC22C2962F34E00210A1D /* SearchUserView.swift */; };
 		AF587028295ABA91007AC052 /* SwiftUI_Social_MediaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF587027295ABA91007AC052 /* SwiftUI_Social_MediaApp.swift */; };
 		AF58702A295ABA91007AC052 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF587029295ABA91007AC052 /* ContentView.swift */; };
 		AF58702C295ABA93007AC052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF58702B295ABA93007AC052 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF3EC22C2962F34E00210A1D /* SearchUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserView.swift; sourceTree = "<group>"; };
 		AF587024295ABA91007AC052 /* SwiftUI Social Media.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI Social Media.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF587027295ABA91007AC052 /* SwiftUI_Social_MediaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Social_MediaApp.swift; sourceTree = "<group>"; };
 		AF587029295ABA91007AC052 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF3EC22A2962EC8400210A1D /* PostView */ = {
+			isa = PBXGroup;
+			children = (
+				AF587077295CC89F007AC052 /* PostView.swift */,
+				AFF9A7E7295F6C0A00E8D621 /* ReusablePostView.swift */,
+				AFF9A7E9295F71E600E8D621 /* PostCardView.swift */,
+			);
+			path = PostView;
+			sourceTree = "<group>";
+		};
+		AF3EC22B2962ECA000210A1D /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				AF587067295C48A4007AC052 /* ReusableProfileContent.swift */,
+				AF587065295C2AB3007AC052 /* ProfileView.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
 		AF58701B295ABA91007AC052 = {
 			isa = PBXGroup;
 			children = (
@@ -198,12 +219,10 @@
 			isa = PBXGroup;
 			children = (
 				AF587063295C29BB007AC052 /* MainView.swift */,
-				AF587065295C2AB3007AC052 /* ProfileView.swift */,
-				AF587067295C48A4007AC052 /* ReusableProfileContent.swift */,
 				AF587073295CB996007AC052 /* CreateNewPost.swift */,
-				AF587077295CC89F007AC052 /* PostView.swift */,
-				AFF9A7E7295F6C0A00E8D621 /* ReusablePostView.swift */,
-				AFF9A7E9295F71E600E8D621 /* PostCardView.swift */,
+				AF3EC22B2962ECA000210A1D /* ProfileView */,
+				AF3EC22A2962EC8400210A1D /* PostView */,
+				AF3EC22C2962F34E00210A1D /* SearchUserView.swift */,
 			);
 			path = "Main View";
 			sourceTree = "<group>";
@@ -294,6 +313,7 @@
 				AF587046295AD4BC007AC052 /* User.swift in Sources */,
 				AF58703D295ABC9F007AC052 /* LoginView.swift in Sources */,
 				AF58702A295ABA91007AC052 /* ContentView.swift in Sources */,
+				AF3EC22D2962F34E00210A1D /* SearchUserView.swift in Sources */,
 				AF587064295C29BB007AC052 /* MainView.swift in Sources */,
 				AF587054295B6841007AC052 /* RegisterView.swift in Sources */,
 				AF587056295B6946007AC052 /* LoginViewModel.swift in Sources */,
